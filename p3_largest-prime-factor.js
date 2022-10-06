@@ -152,8 +152,8 @@ const recursive_get_largest_prime_fact = (number) => {
         other_stats: { subproblem_iteration_count: it_reduction_count }
     };
 
-    console.log("\n\n")
+    console.log("\n\n");
     console.log("Runtime Complexity Statistics");
-    console.table([it_solution_runtime_stats, rec_solution_runtime_stats])
-    console.log("\n\n")
+    console.table([it_solution_runtime_stats, rec_solution_runtime_stats]);
+    console.log("\n\n");
 })()
