@@ -7,27 +7,33 @@
 
 
 let cache = {1: 1, 2: 2};
-const fib_r = (num) => {
-    if (cache[num]) return cache[num];
+const fib_r = (n) => {
+    if (cache[n]) return cache[n];
 
-    let val = fib_r(num - 1) + fib_r(num - 2);
-    cache[num] = val;
+    let val = fib_r(n - 1) + fib_r(n - 2);
+    cache[n] = val;
 
     return val;
+}
+
+const fib = (n) => {
+    if (n <= 2) return n;
+
+    return fib(n - 1) + fib(n - 2);
 }
 
 const MAX_FIB = 4000000
 
 let i = 1;
-let fib = 0;
+let fib_n = 0;
 let sum_of_evens = 0;
 while (fib < MAX_FIB){
-    fib = fib_r(i);
+    fib_n = fib_r(i);
 
     if (fib % 2 === 0) 
-        sum_of_evens += fib
+        sum_of_evens += fib_n
 
-    console.log(`fib_r(${i})=${fib}`)
+    console.log(`fib_r(${i})=${fib_n}`)
 
     i++;
 }

@@ -11,7 +11,7 @@
  * 
  */
 
-let util = require("./utils/util")
+let util = require("../utils/util")
 
 let cache = {}; // cache calls to expensive is_prime
 const is_num_circular_prime_cached = (num) => {
